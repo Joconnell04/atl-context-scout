@@ -7,7 +7,7 @@ A small CLI tool that pulls current Atlanta news, weather, and events via [Brave
 - Searches Brave for current Atlanta news headlines
 - Pulls today's weather forecast
 - Finds upcoming local events and things to do
-- Reads your phone number from a private Notion vault page for personalization
+- Fetches personalization data from a private Notion vault page
 - Outputs a clean markdown report to stdout or a file
 
 ## Setup
@@ -51,7 +51,7 @@ python main.py --output report.md
 |---|---|
 | `BRAVE_API_KEY` | Brave Search API subscription token |
 | `NOTION_TOKEN` | Notion integration secret |
-| `NOTION_VAULT_PAGE_ID` | Page ID of your Notion Secure Vault |
+| `NOTION_VAULT_PAGE_ID` | Page ID of your Notion vault page |
 | `DEFAULT_LOCATION` | Default city/area for the report |
 
 ## Project Structure
@@ -64,6 +64,6 @@ atl-context-scout/
 └── src/
     ├── config.py           # Env/config loader
     ├── brave_client.py     # Brave Search API wrapper
-    ├── notion_vault.py     # Notion Secure Vault reader
+    ├── notion_vault.py     # Notion vault reader
     └── report.py           # Markdown report formatter
 ```
